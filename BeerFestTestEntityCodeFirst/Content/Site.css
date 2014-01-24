@@ -40,3 +40,17 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+
+.titleimagebrowser {
+    height: 100px;
+    width: 100px;
+}
+
+.titlemaindiv {
+    border: 3px solid grey;
+    margin-right: 10px;
+    float: none;
+}
+.titlesubdiv {
+    float: none;
+}

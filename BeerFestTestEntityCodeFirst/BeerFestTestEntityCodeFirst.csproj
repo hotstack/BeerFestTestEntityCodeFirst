@@ -173,6 +173,7 @@
     <Compile Include="Models\CompanyEvent.cs" />
     <Compile Include="Models\BeerFesContext.cs" />
     <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\HomeEventViewModel.cs" />
     <Compile Include="Models\Hours.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Image.cs" />
@@ -185,6 +186,26 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\4_beerfes.jpg" />
+    <Content Include="Content\images\4_beerfes_logo.gif" />
+    <Content Include="Content\images\BeerCoordinator72.png" />
+    <Content Include="Content\images\BeerFesNagoya72.png" />
+    <Content Include="Content\images\BeerFesOsaka72.png" />
+    <Content Include="Content\images\BeerFesTokyo72.png" />
+    <Content Include="Content\images\BeerFesYokohama72.png" />
+    <Content Include="Content\images\BeerJudge72.png" />
+    <Content Include="Content\images\BeerTaster72.png" />
+    <Content Include="Content\images\BOY72.png" />
+    <Content Include="Content\images\brewing_seminar72.png" />
+    <Content Include="Content\images\CBA_logo_E.png" />
+    <Content Include="Content\images\CBA_logo_J.png" />
+    <Content Include="Content\images\conference72.png" />
+    <Content Include="Content\images\CraftBeerWeek72.png" />
+    <Content Include="Content\images\gear.png" />
+    <Content Include="Content\images\GrandeBiere72.png" />
+    <Content Include="Content\images\IBC72.png" />
+    <Content Include="Content\images\JABC72.png" />
+    <Content Include="Content\images\Kansya72.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

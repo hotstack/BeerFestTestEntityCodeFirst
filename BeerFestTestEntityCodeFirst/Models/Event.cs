@@ -21,6 +21,7 @@ namespace BeerFestTestEntityCodeFirst.Models
         public bool? ComingSoon { get; set; }
         public bool? MonthOnly { get; set; }
         public string TwitterUserName { get; set; }
+        public string IconLink { get; set; }
 
         // Navigation Property
         public virtual ICollection<EventLang> EventLangs { get; set; }
