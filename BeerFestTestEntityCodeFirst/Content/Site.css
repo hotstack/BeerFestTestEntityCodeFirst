@@ -48,9 +48,15 @@ input[type="checkbox"].input-validation-error {
 
 .titlemaindiv {
     border: 3px solid grey;
-    margin-right: 10px;
-    float: none;
+    margin: 5px;
+    float: left;
 }
 .titlesubdiv {
+    float: left;
+    margin: 5px;
+    width: 140px;
+}
+
+.testdiv {
     float: none;
 }
