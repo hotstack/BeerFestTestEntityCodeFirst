@@ -1,0 +1,75 @@
+﻿@model IEnumerable<BeerFestTestEntityCodeFirst.Models.EventLang>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Event.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LangID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Directions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TicketOrder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Map)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pronunciation)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LangID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Directions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TicketOrder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Map)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pronunciation)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EventLangID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EventLangID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EventLangID })
+        </td>
+    </tr>
+}
+
+</table>

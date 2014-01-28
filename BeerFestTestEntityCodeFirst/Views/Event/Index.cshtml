@@ -1,0 +1,99 @@
+﻿@model IEnumerable<BeerFestTestEntityCodeFirst.Models.Event>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventFinish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TicketPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreOrderTicketPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TicketSalesStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreOrderTicketSalesEnd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ComingSoon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MonthOnly)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TwitterUserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IconLink)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EventFinish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TicketPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreOrderTicketPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TicketSalesStart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreOrderTicketSalesEnd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ComingSoon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MonthOnly)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TwitterUserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IconLink)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EventID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EventID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EventID })
+        </td>
+    </tr>
+}
+
+</table>

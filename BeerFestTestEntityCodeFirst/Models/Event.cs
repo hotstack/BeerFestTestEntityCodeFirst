@@ -25,6 +25,8 @@ namespace BeerFestTestEntityCodeFirst.Models
 
         // Navigation Property
         public virtual ICollection<EventLang> EventLangs { get; set; }
+
+        public virtual ICollection<Hours> EventHours { get; set; }
     }
 
     public class EventLang

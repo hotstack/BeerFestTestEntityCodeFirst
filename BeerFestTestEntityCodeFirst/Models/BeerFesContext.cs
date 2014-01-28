@@ -19,5 +19,7 @@ namespace BeerFestTestEntityCodeFirst.Models
         public DbSet<Beer> Beers { get; set; }
         public DbSet<BeerEvent> BeerEvents { get; set; }
         public DbSet<CompanyEvent> CompanyEvents { get; set; }
+
+        public System.Data.Entity.DbSet<BeerFestTestEntityCodeFirst.Models.EventLang> EventLangs { get; set; }
     }
 }

@@ -1,0 +1,114 @@
+﻿@model BeerFestTestEntityCodeFirst.Models.Event
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Event</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EventFinish)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventFinish)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TicketPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TicketPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreOrderTicketPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreOrderTicketPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TicketSalesStart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TicketSalesStart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreOrderTicketSalesEnd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreOrderTicketSalesEnd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComingSoon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComingSoon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonthOnly)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonthOnly)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TwitterUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TwitterUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IconLink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IconLink)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EventID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
