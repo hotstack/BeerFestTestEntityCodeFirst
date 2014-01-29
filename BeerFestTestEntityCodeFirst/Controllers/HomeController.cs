@@ -17,7 +17,8 @@ namespace BeerFestTestEntityCodeFirst.Controllers
         public ActionResult Index()
         {
             var model = from r in _db.Events
-                        where r.StartDate > DateTime.Now
+                        where r.EndDate > DateTime.Now
+                        orderby r.StartDate ascending
                         select r;
                            /* new HomeEventViewModel
                          {

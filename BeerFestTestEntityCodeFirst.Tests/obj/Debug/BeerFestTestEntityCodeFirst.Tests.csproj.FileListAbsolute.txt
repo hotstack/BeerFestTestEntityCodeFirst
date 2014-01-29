@@ -42,3 +42,5 @@ C:\code\BeerFestTestEntityCodeFirst\BeerFestTestEntityCodeFirst.Tests\bin\Debug\
 C:\code\BeerFestTestEntityCodeFirst\BeerFestTestEntityCodeFirst.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 C:\code\BeerFestTestEntityCodeFirst\BeerFestTestEntityCodeFirst.Tests\obj\Debug\BeerFestTestEntityCodeFirst.Tests.dll
 C:\code\BeerFestTestEntityCodeFirst\BeerFestTestEntityCodeFirst.Tests\obj\Debug\BeerFestTestEntityCodeFirst.Tests.pdb
+D:\code\BeerFestTestEntityCodeFirst\BeerFestTestEntityCodeFirst.Tests\obj\Debug\BeerFestTestEntityCodeFirst.Tests.csprojResolveAssemblyReference.cache
+D:\code\BeerFestTestEntityCodeFirst\BeerFestTestEntityCodeFirst.Tests\obj\Debug\BeerFestTestEntityCodeFirst.Tests.dll

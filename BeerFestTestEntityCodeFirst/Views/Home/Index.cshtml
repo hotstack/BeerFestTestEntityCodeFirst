@@ -2,17 +2,23 @@
 @{
     ViewBag.Title = "Home Page";
 }
-<div class="testdiv">
+<div class="eventdiv">
     @foreach (var item in Model)
     {
         <div class="titlemaindiv">
-            <div class="titlesubdiv">
-                <img src="@item.IconLink" class="titleimagebrowser" />
+            <a href="@Url.Action("Details", "Event", new { id=item.EventID })">
+                <span class="emptyspan"></span>
+            </a>
+            <div class="titleimagediv">
+                <a href="@Url.Action("Details", "Event", new { id=item.EventID })">
+                    <img src="@item.IconLink" class="titleimagebrowser" />
+                </a>
             </div>
             <div class="titlesubdiv">
-                <div>@item.Name</div>
+                <div><a href="@Url.Action("Details", "Event", new { id=item.EventID })">@item.Name</a></div>
                 <div>@item.StartDate.Value.ToString("yyyy/MM/dd") (@item.StartDate.Value.ToString("ddd")) ~ @item.EndDate.Value.ToString("yyyy/MM/dd") (@item.EndDate.Value.ToString("ddd"))</div>
             </div>
         </div>
     }
 </div>
+<div class="cleardiv"></div>

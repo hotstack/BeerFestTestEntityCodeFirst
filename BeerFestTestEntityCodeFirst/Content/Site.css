@@ -49,14 +49,37 @@ input[type="checkbox"].input-validation-error {
 .titlemaindiv {
     border: 3px solid grey;
     margin: 5px;
-    float: left;
+    display: inline-block;
+    position: relative;
 }
 .titlesubdiv {
     float: left;
     margin: 5px;
     width: 150px;
+    z-index: 2;
 }
 
-.testdiv {
+.titleimagediv {
+    float: left;
+    width: 110px;
+    height: 110px;
+    z-index: 2;
+}
+
+.eventdiv {
     float: none;
+}
+
+.cleardiv {
+    clear: both;
+}
+
+.emptyspan {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: url('/Content/images/empty.gif');
 }
