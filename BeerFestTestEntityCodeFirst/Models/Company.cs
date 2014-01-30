@@ -19,6 +19,8 @@ namespace BeerFestTestEntityCodeFirst.Models
         // Navigation Property
         public virtual ICollection<CompanyLang> CompanyLangs { get; set; }
         public virtual Image Image { get; set; }
+
+        public virtual ICollection<Beer> Beers { get; set; }
     }
 
     public class CompanyLang
