@@ -7,19 +7,15 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Event</h4>
+    <div>
+        <div class="detailstitle"><img src="@Model.IconLink" class="titleimagebrowser" /></div>
+        <div class="detailstitle"><span class="align-middle">@Html.DisplayFor(model => model.Name)</span></div>
+        <div class="cleardiv"></div>
+    </div>
 	<hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.StartDate)
+            Start
         </dt>
 
         <dd>
@@ -27,7 +23,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.EndDate)
+            End
         </dt>
 
         <dd>
@@ -35,78 +31,65 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.EventFinish)
+            Hours
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.EventFinish)
+            <table>
+                @foreach (var item in Model.EventHours)
+                {
+                    <tr>
+                        <td>@item.Date.Value.ToString("yyyy/MM/dd (ddd)")</td>
+                        <td>@item.StartTime.Value.ToString("t") - @item.FinishTime.Value.ToString("t") (Gates Open: @item.GatesOpen.Value.ToString("t") / Last Call @item.LastCall.Value.ToString("t"))</td>
+                    </tr>
+                }
+            </table>
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TicketPrice)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TicketPrice)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PreOrderTicketPrice)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.PreOrderTicketPrice)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.TicketPrice)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TicketSalesStart)
-        </dt>
+                <dd>
+                    ￥@Model.TicketPrice.Value.ToString("G29")
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TicketSalesStart)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.PreOrderTicketPrice)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PreOrderTicketSalesEnd)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.PreOrderTicketPrice)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PreOrderTicketSalesEnd)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.TicketSalesStart)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ComingSoon)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.TicketSalesStart)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ComingSoon)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.PreOrderTicketSalesEnd)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MonthOnly)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.PreOrderTicketSalesEnd)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MonthOnly)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TwitterUserName)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.TwitterUserName)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TwitterUserName)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.TwitterUserName)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.IconLink)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.IconLink)
-        </dd>
-
-    </dl>
+            </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.EventID }) |

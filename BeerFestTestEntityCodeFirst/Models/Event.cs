@@ -11,7 +11,11 @@ namespace BeerFestTestEntityCodeFirst.Models
         public int EventID { get; set; }
         [Required]
         public string Name { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:d}({0:ddd})")]
         public DateTime? StartDate { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:d}({0:ddd})")]
         public DateTime? EndDate { get; set; }
         public bool? EventFinish { get; set; }
         public decimal? TicketPrice { get; set; }

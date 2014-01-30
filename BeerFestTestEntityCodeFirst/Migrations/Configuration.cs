@@ -17,8 +17,8 @@ namespace BeerFestTestEntityCodeFirst.Migrations
         protected override void Seed(BeerFestTestEntityCodeFirst.Models.BeerFesDB context)
         {
             context.Events.AddOrUpdate(e => e.Name,
-                new Event { Name = "Grande Biere 2014", StartDate = DateTime.Parse("2014-4-25"), EndDate = DateTime.Parse("2014-4-27"), TicketPrice = 5000, ComingSoon = false },
-                new Event { Name = "BeerFes Tokyo 2014", StartDate = DateTime.Parse("2014-5-31"), EndDate = DateTime.Parse("2014-6-1"), TicketPrice = 5000, ComingSoon = false }
+                new Event { Name = "Grande Biere 2014", StartDate = DateTime.Parse("2014-4-25"), EndDate = DateTime.Parse("2014-4-27"), TicketPrice = 5000, ComingSoon = false, IconLink = "/Content/images/GrandeBiere72.png" },
+                new Event { Name = "BeerFes Tokyo 2014", StartDate = DateTime.Parse("2014-5-31"), EndDate = DateTime.Parse("2014-6-1"), TicketPrice = 5000, ComingSoon = false, IconLink = "/Content/images/BeerFesTokyo72.png" }
                 );
         }
     }
