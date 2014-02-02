@@ -21,9 +21,12 @@ namespace BeerFestTestEntityCodeFirst.Models
 
         // Foreign Key
         public int BeerID { get; set; }
+        public int EventID { get; set; }
 
         // Navigation Properties
         public virtual ICollection<Company> Companies { get; set; }
         public virtual Beer Beer { get; set; }
+
+        public virtual Event Event { get; set; }
     }
 }

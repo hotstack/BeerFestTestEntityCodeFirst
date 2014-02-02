@@ -1,0 +1,79 @@
+﻿@model IEnumerable<BeerFestTestEntityCodeFirst.Models.BeerEvent>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Company
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Beer.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kegs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bottles)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoldOut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Out)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdditionalInfo)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <table>
+                    @foreach (var company in item.Companies)
+                    {
+                        <tr>
+                            <td>@company.TypeID.ToString()</td>
+                            <td><a href="@Url.Action("Details", "Company", new { id=company.CompanyID })">@Html.DisplayFor(modelItem => company.Name)</a></td>
+                        </tr>
+                    }
+                </table>
+            </td>
+
+            <td>
+                <a href="@Url.Action("Details", "Beer", new { id=item.Beer.BeerID })">@Html.DisplayFor(modelItem => item.Beer.Name)</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kegs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bottles)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoldOut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Out)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdditionalInfo)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.BeerEventID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.BeerEventID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.BeerEventID })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,66 @@
+﻿@model BeerFestTestEntityCodeFirst.Models.Beer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Beer</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BeerStyle.BeerStyleNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BeerStyle.BeerStyleNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ABV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ABV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IBU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IBU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edited)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edited)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BeerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

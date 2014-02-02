@@ -1,0 +1,120 @@
+﻿@model BeerFestTestEntityCodeFirst.Models.BeerEvent
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BeerEvent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Beer.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Beer.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Event.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Event.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KyokaiBooth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KyokaiBooth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kegs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kegs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bottles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bottles)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KegVolume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KegVolume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BottleVolume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BottleVolume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoldOut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoldOut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Out)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Out)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdditionalInfo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdditionalInfo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.X)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.X)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Y)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Y)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
