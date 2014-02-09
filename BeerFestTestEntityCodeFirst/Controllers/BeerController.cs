@@ -39,8 +39,21 @@ namespace BeerFestTestEntityCodeFirst.Controllers
         // GET: /Beer/Create
         public ActionResult Create()
         {
-            ViewBag.BeerStyleID = new SelectList(db.BeerStyles, "BeerStyleID", "BeerStyleNumber");
-            return View();
+            BeerCreateViewModel bcvm = new BeerCreateViewModel();
+            bcvm.CompanyList = new SelectList(db.Companies.ToList(), "CompanyID", "Name");
+            var styleid =
+                db.BeerStyles
+                    .Where(s => s.StyleName != null)
+                    .AsEnumerable()
+                    .Select(s => new
+                    {
+                        StyleID = s.BeerStyleID,
+                        StyleName = string.Format("{0} - {1}", s.BeerStyleNumber.ToString(), s.StyleName.ToString())
+                    })
+                    .ToList();
+
+            bcvm.BeerStyleList = new SelectList(styleid, "StyleID", "StyleName");
+            return View(bcvm);
         }
 
         // POST: /Beer/Create

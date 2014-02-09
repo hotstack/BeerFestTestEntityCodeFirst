@@ -173,6 +173,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Beer.cs" />
     <Compile Include="Models\BeerCategory.cs" />
+    <Compile Include="Models\BeerCreateViewModel.cs" />
     <Compile Include="Models\BeerEvent.cs" />
     <Compile Include="Models\BeerEventViewModel.cs" />
     <Compile Include="Models\BeerStyle.cs" />
